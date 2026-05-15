@@ -51,6 +51,7 @@ e2ee-chat-prototype/
 ├── server.py      # WebSocket relay server
 ├── client.py      # CLI chat client
 ├── crypto.py      # Encryption logic (NaCl)
+├── LICENSE
 └── README.md
 
 ````
