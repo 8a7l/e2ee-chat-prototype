@@ -43,3 +43,96 @@ The server never sees plaintext messages.
 ---
 
 ## 📁 Project Structure
+
+```
+
+e2ee-chat-prototype/
+│
+├── server.py      # WebSocket relay server
+├── client.py      # CLI chat client
+├── crypto.py      # Encryption logic (NaCl)
+└── README.md
+
+````
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install dependencies
+
+```bash
+pip install websockets pynacl
+````
+
+---
+
+### 2. Run server
+
+```bash
+python server.py
+```
+
+Server runs on:
+
+```text
+ws://127.0.0.1:8765
+```
+
+---
+
+### 3. Run client
+
+Run multiple instances for different users:
+
+```bash
+python client.py
+```
+
+---
+
+## 💬 Commands
+
+```text
+/help              Show help
+/list              Show online users
+/msg user text     Send encrypted message
+/finger user       Show fingerprint
+/quit              Exit
+```
+
+---
+
+## 👁 Fingerprints
+
+* Used to detect possible key changes
+* Helps identify unexpected identity changes
+
+---
+
+## ⚠️ Limitations
+
+* No message persistence
+* No offline message delivery
+* No identity recovery
+* No advanced forward secrecy system
+* Fingerprints are basic and manually verified
+* Keys are not stored between sessions
+
+---
+
+## 🎯 Purpose
+
+This project is for learning and experimentation:
+
+* Understanding encrypted communication
+* Learning how messaging systems work internally
+* Experimenting with WebSockets and cryptography
+
+---
+
+## 📜 License
+
+GPLv3 
+
+---
